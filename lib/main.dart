@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const HomeApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class HomeApp extends StatelessWidget {
+  const HomeApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +14,21 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('First App'),
           centerTitle: true,
+          backgroundColor: Colors.cyan[400],
         ),
         body: const Center(
-          child: Text('Hello Qi'),
+          child: Text(
+            'Hello Qi !',
+            style: TextStyle(
+                fontSize: 20, fontWeight: FontWeight.bold, color: Colors.grey),
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            print('You clicked me');
+          },
+          backgroundColor: Colors.cyan[400],
+          child: const Text('Click'),
         ),
       ),
     );
